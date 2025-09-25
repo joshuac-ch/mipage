@@ -1,0 +1,75 @@
+---
+import reactLogo from "../../assets/react.svg"
+import vueLogo from "../../assets/vue.svg"
+import awsLogo from "../../assets/aws.svg"
+import dockerLogo from "../../assets/docker.svg"
+import Header from "@/components/Header/Header.astro"
+import IconLogo from "../../assets/nino.jpg"
+---
+
+<Header></Header>
+<div class="flex flex-col items-center">
+    <section class="flex flex-row gap-10 items-center">
+       <div>
+        <h1 class="font-black text-4xl">Hola soy Nino dev</h1>
+        <h2 class="text-2xl font-black ">Ingeniero de software con I.A.</h2>       
+        <div id="contenedor-img" class="flex flex-row justify-between gap-3 pt-4">
+            <img  src={reactLogo.src} class="h-10 w-10" alt="null"> 
+            <img  src={vueLogo.src} class="h-10 w-10" alt="null"> 
+            <img  src={awsLogo.src} class="h-10 w-10" alt="null"> 
+            <img  src={dockerLogo.src} class="h-10 w-10" alt="null"> 
+        </div>
+       </div>
+       <div>
+        <img src={IconLogo.src} class="h-50 w-50 rounded-full" alt="">
+       </div>
+    </section>   
+    <section >
+        <div>
+            <h1 class="font-black text-4xl">Sobre Mi</h1>
+            <div class="prose prose-xl text-white">
+            <p>Me gusta crear sistemas que brinden satisfaccion a los clientes soy una persona autodidacta, proactiva, responsable siempre toco el codigo.
+                 Soy curioso en saber como funciona algo aprendo de manera proactiva y me gusta mejorar mis habilidades dia a dia para ofrecer un mejor 
+                 servicio a mis clientes.            
+            Siempre me a gustado aprender cosas nuevas lo hace mas emocionate estar en la pantalla creando cosas que nunca antes haz echo.</p>
+            </div>
+        </div>   
+    </section>
+    <section>
+        <div>
+            <h1 class="font-black text-4xl">Experiencia</h1>
+        </div>     
+    </section>
+    <section>
+        <div>
+            <h1 class="font-black text-4xl">Proyectos</h1>
+        </div>    
+    </section>
+    <section>
+        <div>
+            <h1 class="font-black text-4xl">Formacion</h1>
+        </div>
+    </section>
+    <section>
+        <div>
+            <h1 class="font-black text-4xl">Contacto</h1>
+        </div>
+    </section>         
+</div>
+
+
+
+<style>
+    section{
+        margin-top: 20px;
+    }
+    #contenedor-img{
+        img{
+            margin: 10;
+        }
+    }
+    .logo:{
+        width: 5px;
+        height:5px;
+    }
+</style>
