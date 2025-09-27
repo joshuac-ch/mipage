@@ -7,8 +7,10 @@ import Header from "@/components/Header/Header.astro"
 import IconLogo from "../../assets/nino.jpg"
 import Foot from "@/components/Footer/Foot.astro"
 ---
-
-<div >
+<video autoplay loop  muted class="absolute inset-0 w-full h-full object-cover -z-10" >
+    <source src="/src/assets/fondo3.mp4" type="video/mp4">
+</video>
+<div class="relative backdrop-blur-xl bg-white/5 rounded-2xl border border-white/20 pt-8" >
     <Header></Header>
 <div class="flex flex-col items-center">
     <section class="flex flex-row gap-10 items-center">
@@ -28,8 +30,8 @@ import Foot from "@/components/Footer/Foot.astro"
     </section>   
     <section >
         <div>
-            <h1 class="font-black text-4xl">Sobre Mi</h1>
-            <div class="prose prose-xl text-white">
+            <h1 class="font-black text-4xl mb-4">Sobre Mi</h1>
+            <div class="prose text-[15px] text-white">
             <p>Me gusta crear sistemas que brinden satisfaccion a los clientes soy una persona autodidacta, proactiva, responsable siempre toco el codigo.
                  Soy curioso en saber como funciona algo aprendo de manera proactiva y me gusta mejorar mis habilidades dia a dia para ofrecer un mejor 
                  servicio a mis clientes.            
@@ -39,16 +41,16 @@ import Foot from "@/components/Footer/Foot.astro"
     </section>
     <section>
         <div>
-            <h1 class="font-black text-4xl">Experiencia https://www.youtube.com/watch?v=MGnK-Gv1av8  20:50</h1>
+            <h1 class="font-black text-4xl">Experiencia </h1>
             <div class="text-2xl flex mt-20">
                 <div class="flex flex-col ">
                     <div class="flex items-center mb-4">
-                        <i class='bxr  bx-shopping-bag'></i> 
+                        <i class='bxr  bx-shopping-bag  text-indigo-500'></i> 
                         <span class="bg-gradient-to-r from-transparent indigo-500 to-indigo-500 h-1 rounded-lg inline-block w-full"></span>
                         
                     </div>
                     <p class="mb-2 text-white font-semibold text-[18px]">Desarrolador fullStack</p>
-                     <p class="text-xs text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
+                    <p class="text-xs text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
                     <p class="prose prose-sm text-[15px] text-gray-300 leading-relaxed">Fui desarrolador por 6 meses en PC-PLANET una empresa tecnologica donde me encargaban proyecto de desarrollo fronted por el momento
                         luego al finalizar decidi  crear un proyecto que pueda agalizar las tareas ya que no tenian un sistema de ventas asi que lo termine creando
                         e implementando un modelo de prediccion para el area de ventas. 
@@ -59,7 +61,7 @@ import Foot from "@/components/Footer/Foot.astro"
                 </div>
                 <div class="flex flex-col">
                     <div class="flex items-center mb-4">
-                        <i class='bxr  bx-shopping-bag'></i> 
+                        <i class='bxr  bx-shopping-bag text-indigo-500'></i> 
                         <span class="bg-indigo-500  h-1 rounded-lg inline-block w-full"></span>
                         
                     </div>
@@ -79,8 +81,12 @@ import Foot from "@/components/Footer/Foot.astro"
     </section>
     <section>
         <div>
-            <h1 class="font-black text-4xl">Proyectos</h1>
-            
+            <h1 class="font-black text-4xl mb-4">Proyectos</h1>
+            <div class="border-white border-2 rounded-2xl p-5">
+                <img src="https://i.pinimg.com/1200x/96/a2/93/96a2934db4fd5f2de2b77e03ce66dff5.jpg" class="w-80 h-60 hover:scale-[1.1] transition-all delay-10" alt="">
+                <p class="mt-3">Proyecto Clone Spotify</p>
+                <p class="mt-2 w-80">Este proyecto se creo usando React | TS | MongoDB | AWS</p>
+            </div>            
         </div>    
     </section>
     <section>
