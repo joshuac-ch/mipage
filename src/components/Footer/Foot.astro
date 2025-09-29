@@ -1,17 +1,18 @@
 ---
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, Twitter } from "lucide-react"
 import IconGithub from "../../assets/footer/github.png"
 import IconLinked from "../../assets/footer/linkedin.png"
 ---
 
-<div id="footer" class="flex flex-row justify-around items-center border-t-white border-t-1 p-10 w-full">
-    <h1>Hecho por ninodev</h1>
+<div id="footer" class="flex flex-col items-center border-t-white/10 border-t-1 p-10 w-full">
     <div class="flex flex-row gap-3">
         <Github className="h-8 w-8"></Github>
         <Linkedin className="h-8 w-8"></Linkedin>
+        <Twitter className="h-8 w-8"></Twitter>
        {/*
         <img src={IconGithub.src} alt="no disponible" class="w-10 h-10">
         <img src={IconLinked.src} alt="no disponible" class="w-10 h-10">
        */}
     </div>
+    <h1 class="mt-4">@ NinoDev 2024. Todos los derechos reservados.</h1>
 </div>
