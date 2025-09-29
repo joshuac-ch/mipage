@@ -3,14 +3,24 @@ import reactLogo from "../../assets/react.svg"
 import vueLogo from "../../assets/vue.svg"
 import awsLogo from "../../assets/aws.svg"
 import dockerLogo from "../../assets/docker.svg"
+import laravelLogo from "../../assets/laravel.svg"
+import mongodbLogo from "../../assets/mongodb.svg"
+import tsLogo from "../../assets/typescript.svg"
+import pytorchLogo from "../../assets/pytorch.svg"
+import pythonLogo from "../../assets/python.svg"
+import tailLogo from "../../assets/tailwind.svg"
+import mlLogo from "../../assets/humanize.svg"
+import expressLogo from "../../assets/express.svg" 
 import Header from "@/components/Header/Header.astro"
 import IconLogo from "../../assets/nino.jpg"
 import Foot from "@/components/Footer/Foot.astro"
+import { Button } from "@/components/ui/button"
+import { FileStack, IceCreamConeIcon, InspectionPanelIcon, PieChart, PiIcon } from "lucide-react"
 ---
 <video autoplay loop  muted class="absolute inset-0 w-full h-full object-cover -z-10" >
     <source src="/src/assets/fondo3.mp4" type="video/mp4">
 </video>
-<div class="relative backdrop-blur-xl bg-white/5 rounded-2xl border border-white/20 pt-8" >
+<div class="relative backdrop-blur-xl bg-white/5 border border-white/20 pt-8" >
     <Header></Header>
 <div class="flex flex-col items-center">
     <section class="flex flex-row gap-10 items-center">
@@ -29,15 +39,17 @@ import Foot from "@/components/Footer/Foot.astro"
        </div>
     </section>   
     <section >
-        <div>
-            <h1 class="font-black text-4xl mb-4">Sobre Mi</h1>
-            <div class="prose text-[15px] text-white">
-            <p>Me gusta crear sistemas que brinden satisfaccion a los clientes soy una persona autodidacta, proactiva, responsable siempre toco el codigo.
-                 Soy curioso en saber como funciona algo aprendo de manera proactiva y me gusta mejorar mis habilidades dia a dia para ofrecer un mejor 
-                 servicio a mis clientes.            
-            Siempre me a gustado aprender cosas nuevas lo hace mas emocionate estar en la pantalla creando cosas que nunca antes haz echo.</p>
-            </div>
-        </div>   
+        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 ">
+            <div>
+                <h1 class="font-black text-4xl mb-4">Sobre Mi</h1>
+                <div class="prose text-[15px] text-white">
+                <p>Me gusta crear sistemas que brinden satisfaccion a los clientes soy una persona autodidacta, proactiva, responsable siempre toco el codigo.
+                     Soy curioso en saber como funciona algo aprendo de manera proactiva y me gusta mejorar mis habilidades dia a dia para ofrecer un mejor 
+                     servicio a mis clientes.            
+                Siempre me a gustado aprender cosas nuevas lo hace mas emocionate estar en la pantalla creando cosas que nunca antes haz echo.</p>
+                </div>
+            </div> 
+        </div>          
     </section>
     <section>
         <div>
@@ -49,8 +61,8 @@ import Foot from "@/components/Footer/Foot.astro"
                         <span class="bg-gradient-to-r from-transparent indigo-500 to-indigo-500 h-1 rounded-lg inline-block w-full"></span>
                         
                     </div>
-                    <p class="mb-2 text-white font-semibold text-[18px]">Desarrolador fullStack</p>
-                    <p class="text-xs text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
+                    <p class="mb-2 text-white font-semibold text-[24px]">Desarrolador fullStack</p>
+                    <p class="text-[16px] text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
                     <p class="prose prose-sm text-[15px] text-gray-300 leading-relaxed">Fui desarrolador por 6 meses en PC-PLANET una empresa tecnologica donde me encargaban proyecto de desarrollo fronted por el momento
                         luego al finalizar decidi  crear un proyecto que pueda agalizar las tareas ya que no tenian un sistema de ventas asi que lo termine creando
                         e implementando un modelo de prediccion para el area de ventas. 
@@ -65,8 +77,8 @@ import Foot from "@/components/Footer/Foot.astro"
                         <span class="bg-indigo-500  h-1 rounded-lg inline-block w-full"></span>
                         
                     </div>
-                    <p class="text-[18px] text-white font-semibold mb-2" >Desarrolador fullStack</p>
-                    <p class="text-xs text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
+                    <p class="text-[24px] text-white font-semibold mb-2" >Desarrolador fullStack</p>
+                    <p class="text-[16px] text-gray-500 mb-4">Julio 7, 2023 - Enero 10, 2024</p>
                     <p class="prose prose-xl text-[15px] text-gray-300 leading-relaxed">Fui desarrolador por 6 meses en PC-PLANET una empresa tecnologica donde me encargaban proyecto de desarrollo fronted por el momento
                         luego al finalizar decidi  crear un proyecto que pueda agalizar las tareas ya que no tenian un sistema de ventas asi que lo termine creando
                         e implementando un modelo de prediccion para el area de ventas. 
@@ -79,16 +91,152 @@ import Foot from "@/components/Footer/Foot.astro"
             </div>
         </div>     
     </section>
-    <section>
-        <div>
-            <h1 class="font-black text-4xl mb-4">Proyectos</h1>
-            <div class="border-white border-2 rounded-2xl p-5">
-                <img src="https://i.pinimg.com/1200x/96/a2/93/96a2934db4fd5f2de2b77e03ce66dff5.jpg" class="w-80 h-60 hover:scale-[1.1] transition-all delay-10" alt="">
-                <p class="mt-3">Proyecto Clone Spotify</p>
-                <p class="mt-2 w-80">Este proyecto se creo usando React | TS | MongoDB | AWS</p>
-            </div>            
-        </div>    
+    <section>       
+         <div>
+            <div class="flex flex-row justify-between items-center">
+                <h1 class="font-black text-4xl mb-8">Proyectos</h1>
+                <h1 class="font-black text-md mb-8 underline cursor-pointer">Mostrar mas</h1>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Tarjeta 1 -->
+                <div class="border border-white/10 overflow-hidden rounded-2xl   shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                    <img src="https://i.pinimg.com/1200x/96/a2/93/96a2934db4fd5f2de2b77e03ce66dff5.jpg" 
+                        class="w-130 h-75 object-cover hover:scale-105 rounded-t-2xl rounded-b-none transition-all duration-300" />
+                    <div class="pl-4 pb-4">
+                        <p class="mt-4 text-[24px] font-semibold">Proyecto Clone Spotify</p>
+                        <p class="text-[16px] text-gray-400">#3</p>
+                        <p class="mt-3 text-[16px]">React | TypeScript | MongoDB | AWS</p>
+                        <div class="flex gap-4 mt-4">
+                            <Button className="bg-white/10 text-sm px-8 py-2">Código</Button>
+                            <Button className="bg-white/10 text-sm px-8 py-2">Ver</Button>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="border border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                    <img src="https://i.pinimg.com/1200x/5f/6f/d4/5f6fd46562acfa141249b2d92cb14f62.jpg" 
+                        class="w-130 h-75 object-cover hover:scale-105 rounded-t-2xl rounded-b-none transition-all duration-300" />
+                    <div class="pl-4 pb-4">
+                        <p class="mt-4 text-[24px] font-semibold">Proyecto Log</p>
+                        <p class="text-[16px] text-gray-400">#2</p>
+                        <p class="mt-3 text-[16px]">React | TypeScript | MongoDB | AWS</p>
+                        <div class="flex gap-4 mt-4">
+                            <Button className="bg-white/10 text-sm px-8 py-2">Código</Button>
+                            <Button className="bg-white/10 text-sm px-8 py-2">Ver</Button>
+                        </div>
+                    </div>
+                </div>
+               
+                
+                
+            </div>         
+        </div>      
     </section>
+    <section >
+       
+         <div class="flex flex-row justify-between mb-4 w-270">          
+                {/*
+                <h1 class="font-black text-4xl">Informacion Extra</h1>            
+                <h1 class="font-black text-4xl">Contacto </h1>           
+                <h1 class="font-black text-4xl">Stack </h1>       
+                */}    
+        </div>
+        <div class="flex flex-row justify-between mb-10">
+            
+            <div class="border  border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                <div class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4">
+                    <InspectionPanelIcon></InspectionPanelIcon>
+                    <p>Informacion</p>
+                </div>
+                <div class="flex m-4 flex-row items-center">
+                    <div class="m-2 border-2 p-4 border-white/10 rounded-full">
+                        <PiIcon></PiIcon>                    
+                    </div>
+                    <div class="">
+                        <p>correo electronico</p>
+                        <p>condorenajoshua98@gmail.com</p>
+                    </div>
+                </div>
+                 <div class="flex m-4 flex-row items-center">
+                    <div class="m-2 border-2 p-4 border-white/10 rounded-full">
+                        <PieChart></PieChart>                    
+                    </div>
+                    <div class="">
+                        <p>Estudios</p>
+                        <p>Estudio en SENATI</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="border h-50 p-0 border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+            <div class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4">
+                <IceCreamConeIcon></IceCreamConeIcon>
+                <p>Contacto</p>
+            </div>
+            <div class="m-4">
+                <p>Hablemos sobre tu proximo proyecto</p>
+                <Button className="mt-4 bg-white/10">Enviar un Mensaje</Button>
+            </div>
+            </div>
+
+
+            <div class="border p-0 border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                <div class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4">
+                    <FileStack></FileStack>
+                    <p>Stack</p>
+                </div>
+                <div class="flex flex-row gap-1 m-1">                    
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                         <img src={reactLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={vueLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={laravelLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={mongodbLogo.src} class="w-15 h-15" alt="">
+                    </div>            
+                       
+                </div>
+                 <div class="flex  flex-row  gap-1 m-1"> 
+                    <div class="border-2 border-white/10 rounded-2xl p-2">                   
+                     <img src={dockerLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2"> 
+                      <img src={awsLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">   
+                       <img src={pytorchLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">   
+                        <img src={mlLogo.src} class="w-15 h-15" alt="">
+                    </div>    
+                </div>
+                 <div class="flex flex-row gap-1 m-1">
+                    <div class="border-2 border-white/10 rounded-2xl p-2">                    
+                        <img src={tsLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={pythonLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={tailLogo.src} class="w-15 h-15" alt="">
+                    </div>
+                    <div class="border-2 border-white/10 rounded-2xl p-2">
+                        <img src={expressLogo.src} class="w-15 h-15" alt="">
+                    </div>    
+                </div>
+            </div>
+        
+        </div>
+       
+        
+    </section>
+    {/*
     <section>
         <div>
             <h1 class="font-black text-4xl">Formacion</h1>
@@ -98,7 +246,8 @@ import Foot from "@/components/Footer/Foot.astro"
         <div>
             <h1 class="font-black text-4xl">Contacto </h1>
         </div>
-    </section>         
+    </section> 
+    */}        
 </div>
 <Foot></Foot>
 </div>
