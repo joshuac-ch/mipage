@@ -16,28 +16,50 @@ import IconLogo from "../../assets/nino.jpg"
 import Foot from "@/components/Footer/Foot.astro"
 import { Button } from "@/components/ui/button"
 import { FileStack, IceCreamConeIcon, InspectionPanelIcon, PieChart, PiIcon } from "lucide-react"
+import { getCollection } from "astro:content"
+const data=await getCollection("stacks") 
+console.log(data)
 ---
 <video autoplay loop  muted class="absolute inset-0 w-full h-full object-cover -z-10" >
     <source src="/src/assets/fondo3.mp4" type="video/mp4">
 </video>
-<div class="relative backdrop-blur-xl bg-white/5 border border-white/20 pt-8" >
-    <Header></Header>
-<div class="flex flex-col items-center">
-    <section class="flex flex-row gap-10 items-center">
-       <div>
-        <h1 class="font-black text-4xl">Hola soy Nino dev</h1>
-        <h2 class="text-2xl font-black ">Ingeniero de software con I.A.</h2>       
-        <div id="contenedor-img" class="flex flex-row justify-between gap-3 pt-4">
-            <img  src={reactLogo.src} class="h-10 w-10" alt="null"> 
-            <img  src={vueLogo.src} class="h-10 w-10" alt="null"> 
-            <img  src={awsLogo.src} class="h-10 w-10" alt="null"> 
-            <img  src={dockerLogo.src} class="h-10 w-10" alt="null"> 
-        </div>
+<div  class="sticky top-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
+     <Header/>
+</div>
+<div class="relative backdrop-blur-xl bg-white/5 pt-8" >
+   
+<div class="flex flex-col justify-between items-center ">
+    <section class="">
+       <div class="grid ml-18 grid-cols-2 items-center p-4   md:grid-cols-2 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">        
+            <h1 class="font-black text-4xl">Hola soy Nino dev</h1>
+            <h2 class="text-2xl font-black mt-2 ">Ingeniero de software con I.A.</h2>
+              
+            <div>
+                <p class="prose text-white mt-4">
+                    Me gusta crear sistemas que brinden satisfaccion a los clientes soy una persona autodidacta y responsable caracterizado
+                    por aprender algo nuevo, mejorando mis habilidades dia a dia.</p>
+            </div>        
+            <div id="contenedor-img" class="flex flex-row justify-between w-120 gap-3 pt-4">
+                <img  src={reactLogo.src} class="h-13 w-13" alt="null"> 
+                <img  src={vueLogo.src} class="h-13 w-13" alt="null"> 
+                <img  src={awsLogo.src} class="h-13 w-13" alt="null"> 
+                <img  src={dockerLogo.src} class="h-13 w-13" alt="null"> 
+                <img src={expressLogo.src} class="h-13 w-13" alt="">
+            </div>
+            <div class="mt-4 flex flex-row items-center justify-between bg-white/20 border-white/10 border-2 rounded-md w-75">
+                <p class=" p-2">condorenajoshua98@gmail.com</p>
+                <i class='bxr  bx-copy bg-white/20 p-2 m-1 rounded-md cursor-pointer hover:bg-indigo-200/10'></i> 
+            </div>
        </div>
-       <div>
-        <img src={IconLogo.src} class="h-50 w-50 rounded-full" alt="">
+       <div class="flex items-center justify-center ">
+        <img src={IconLogo.src} class="h-70 w-70 rounded-full" alt="">
        </div>
+       </div>
+        
+
     </section>   
+   {/*
     <section >
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 ">
             <div>
@@ -51,6 +73,7 @@ import { FileStack, IceCreamConeIcon, InspectionPanelIcon, PieChart, PiIcon } fr
             </div> 
         </div>          
     </section>
+   */}
     <section>
         <div>
             <h1 class="font-black text-4xl">Experiencia </h1>
@@ -170,7 +193,7 @@ import { FileStack, IceCreamConeIcon, InspectionPanelIcon, PieChart, PiIcon } fr
             </div>
 
 
-            <div class="border h-50 p-0 border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+            <div class="border h-45 p-0 border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
             <div class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4">
                 <IceCreamConeIcon></IceCreamConeIcon>
                 <p>Contacto</p>
@@ -182,54 +205,22 @@ import { FileStack, IceCreamConeIcon, InspectionPanelIcon, PieChart, PiIcon } fr
             </div>
 
 
-            <div class="border p-0 border-white/10 overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+            <div class="border p-0 border-white/10  overflow-hidden rounded-2xl  shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
                 <div class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4">
                     <FileStack></FileStack>
                     <p>Stack</p>
                 </div>
-                <div class="flex flex-row gap-1 m-1">                    
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                         <img src={reactLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={vueLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={laravelLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={mongodbLogo.src} class="w-15 h-15" alt="">
-                    </div>            
-                       
-                </div>
-                 <div class="flex  flex-row  gap-1 m-1"> 
-                    <div class="border-2 border-white/10 rounded-2xl p-2">                   
-                     <img src={dockerLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2"> 
-                      <img src={awsLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">   
-                       <img src={pytorchLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">   
-                        <img src={mlLogo.src} class="w-15 h-15" alt="">
-                    </div>    
-                </div>
-                 <div class="flex flex-row gap-1 m-1">
-                    <div class="border-2 border-white/10 rounded-2xl p-2">                    
-                        <img src={tsLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={pythonLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={tailLogo.src} class="w-15 h-15" alt="">
-                    </div>
-                    <div class="border-2 border-white/10 rounded-2xl p-2">
-                        <img src={expressLogo.src} class="w-15 h-15" alt="">
-                    </div>    
-                </div>
+                <div class="flex flex-row gap-1 m-1"> 
+                   <div class="flex flex-row justify-center flex-wrap w-76">
+                     {data.map((s)=>{
+                        const {logo,nombre}=s.data
+                        return(                           
+                            <div class="border-2 bg-indigo-500/10 overflow-hidden border-white/10 m-1 rounded-2xl p-2 shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                                <img src={logo} alt={nombre} class="hover:scale-105 transition-all duration-100 w-12 h-12"/>
+                            </div>                            
+                        )})}    
+                    </div>                   
+                </div>               
             </div>
         
         </div>
