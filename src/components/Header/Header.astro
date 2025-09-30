@@ -1,27 +1,29 @@
 ---
 import { Github, Linkedin, Music, User } from "lucide-react";
-
+import { Button } from "../ui/button";
 
 ---
 
-<div id="header" class="flex flex-row justify-between w-full p-10">
-    <div class="">Logo</div>
-    <div>
-        <ul class="flex flex-row gap-10">
-            <li>Sobre mi</li>
-            <li>Experiencia</li>
-            <li>Proyectos</li>
-            <li>Contactar</li>
+<div id="header" class="flex flex-row justify-between pl-15 pr-15 items-center w-full p-4">
+    <div class="">
+         <ul class="flex flex-row gap-4">
+            <li class="cursor-pointer hover:text-indigo-400/80 hover:scale-120 transition-all">
+                <Github className=""></Github>               
+            </li>
+            <li class="cursor-pointer hover:text-indigo-400/80 hover:scale-120 transition-all">
+                <Linkedin></Linkedin>                
+            </li>
         </ul>
     </div>
     <div>
-        <ul class="flex flex-row gap-4">
-            <li>
-                <Github className=""></Github>               
-            </li>
-            <li>
-                <Linkedin className=""></Linkedin>                
-            </li>
+        <ul class="flex text-md flex-row gap-10 ">
+            <li class="cursor-pointer hover:text-indigo-400/80">Sobre mi</li>
+            <li class="cursor-pointer hover:text-indigo-400/80">Experiencia</li>
+            <li class="cursor-pointer hover:text-indigo-400/80">Proyectos</li>
+            <li class="cursor-pointer hover:text-indigo-400/80">Contactar</li>
         </ul>
+    </div>
+    <div>
+       <Button className="bg-white/10 hover:bg-indigo-200/10">Descargar CV</Button>
     </div>
 </div>
