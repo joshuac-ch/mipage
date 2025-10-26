@@ -1,0 +1,29 @@
+---
+import PlantillaProyects from "@/components/Components/PlantillaProyects";
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async() => {
+    const proyecto=await getCollection("proyects")
+    return proyecto.map((p) => ({
+    params: { id: p.slug },
+    props: { proyecto: p }, 
+  }));
+})
+
+const {proyecto}=Astro.props
+const {data}=proyecto
+---
+<meta charset="utf-8">
+<div>
+    <PlantillaProyects data={data} client:load></PlantillaProyects>
+</div>
+<style>
+  html,
+  body {
+    background-color: #1c1b1b;
+    color: white;
+    margin: 0;
+
+    backdrop-filter: blur(20px);
+  }
+</style>
