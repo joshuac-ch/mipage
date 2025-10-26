@@ -1,3 +1,7 @@
+---
+import { ClientRouter } from "astro:transitions";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -7,6 +11,7 @@
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 		<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+		<ClientRouter/>
 	</head>
 	<body>
 		<slot />
@@ -21,6 +26,6 @@
 		margin: 0;
 		
 		backdrop-filter: blur(20px);
-		background: rgba(38, 86, 218, 0.05);		
+		
 	}
 </style>
