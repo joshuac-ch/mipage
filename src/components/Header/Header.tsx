@@ -29,8 +29,10 @@ export default function Header() {
             <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/extras">Extras</a></li>
         </ul>
     </div>
-    <div className="hidden md:block">
+    <div className="">
+      <a href="/cv/CVJoshuaCondorenaV2.pdf" download={"/cv/CVJoshuaCondorenaV2.pdf"}>
        <Button className="bg-white/10 hover:bg-indigo-200/10">Descargar CV</Button>
+      </a>
     </div>
     {/* Ícono de menú hamburguesa (visible solo en móvil) */}
       <div className="md:hidden">
