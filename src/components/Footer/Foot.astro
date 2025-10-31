@@ -6,9 +6,16 @@ import IconLinked from "../../assets/footer/linkedin.png"
 
 <div id="footer" class="flex flex-col items-center border-t-white/10 border-t-1 p-10 w-full">
     <div class="flex flex-row gap-3">
-        <Github className="hover:text-indigo-400/80 cursor-pointer hover:scale-105 h-8 w-8 transition-all"></Github>
-        <Linkedin className=" hover:text-indigo-400/80 cursor-pointer hover:scale-105 h-8 w-8 transition-all"></Linkedin>
+        <a href="https://github.com/joshuac-ch" target={'_blank'}>
+          <Github className="hover:text-indigo-400/80 cursor-pointer hover:scale-105 h-8 w-8 transition-all"></Github>
+        </a>      
+        <a href="https://www.linkedin.com/in/joshua-gustavo-condorena-chuquica%C3%B1a-57817228b/" target={'_blank'}>
+          <Linkedin className=" hover:text-indigo-400/80 cursor-pointer hover:scale-105 h-8 w-8 transition-all"></Linkedin>               
+        </a>
+       <a href="">
         <Twitter className="hover:text-indigo-400/80 cursor-pointer hover:scale-105 h-8 w-8 transition-all"></Twitter>
+       </a>
+        
        {/*
         <img src={IconGithub.src} alt="no disponible" class="w-10 h-10">
         <img src={IconLinked.src} alt="no disponible" class="w-10 h-10">
