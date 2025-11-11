@@ -32,7 +32,7 @@ export default function Header() {
         </ul>
     </div>
     <div className="">
-      <a href="/cv/CVJoshuaCondorenaV2.pdf" download={"/cv/CVJoshuaCondorenaV2.pdf"}>
+      <a href="/cv/CV2025JoshuaCCH.pdf" download={"/cv/CV2025JoshuaCCH.pdf"}>
        <Button className="bg-white/10 hover:bg-indigo-200/10">Descargar CV</Button>
       </a>
     </div>
