@@ -1,7 +1,11 @@
 ---
 import Header from "@/components/Header/Header";
 import "../../styles/global.css"
+import { getCollection } from "astro:content";
+const datacerti=await getCollection("certi")
+
 ---
+<div class="relative min-h-screen w-full overflow-hidden">
 <meta charset='utf-8'>
 <video
   autoplay
@@ -9,17 +13,29 @@ import "../../styles/global.css"
   muted
   class="absolute inset-0 w-full h-full object-cover -z-10"
 >
-  <source src="/src/assets/fondo4.mp4" type="video/mp4" />
+  <source src="/fondo4.mp4" type="video/mp4" />
 </video>
 <div
   class="sticky top-0 z-50 backdrop-blur-xl  text-white border-1 border-white/5 bg-white/5">
   <Header client:load></Header>
 </div>
 <div class="relative backdrop-blur-xl text-white bg-white/5">
-   <div class="">
-     <h2>Certificaciones</h2>
+   <div class="pt-4">
+     <h2 class="text-center text-2xl ">Certificaciones</h2>
    </div>
-   <div class="">
-
+   <div class="p-4 md:p-0 mt-4 flex flex-row flex-wrap gap-8 justify-center">
+      {datacerti.map((c)=>{
+        const {name,img,descri}=c.data
+        return(
+          <div class="flex flex-col justify-start  rounded-md bg-white/20">
+            <img src={img} class="w-200  rounded-md object-contain " alt=""/>
+            <div class="mt-4 p-4 ">
+              <p class="text-2xl">{name}</p>
+              <p class="text-2xl">{descri}</p>
+            </div>
+          </div>
+        )
+      })}
    </div>
+</div>
 </div>
