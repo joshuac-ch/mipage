@@ -44,4 +44,5 @@ conclusion: " Este proyecto demuestra mi capacidad para diseñar y desarrollar
             basadas en microservicios de IA, integrar servicios en la nube y
             construir un frontend atractivo y profesional conectado a un backend
             real desplegado en la nube utilizando servicios de AWS EC2 y S3"
+link: "https://spotify-clone5.s3.us-east-1.amazonaws.com/index.html"
 ---

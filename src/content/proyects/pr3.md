@@ -21,4 +21,5 @@ tecnologias: [{"name": "Backend: "  ,"descri": "Laravel / PHP Mysql / PhpmyAmin,
             ]
 conclusion: "Este proyecto representa una solución completa de ventas inteligente, ideal para empresas que buscan automatizar su gestión comercial y anticipar resultados.
 Combina una arquitectura escalable, una interfaz limpia y un modelo de IA que agrega valor predictivo real al proceso de ventas."
+link: ""
 ---

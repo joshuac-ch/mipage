@@ -22,4 +22,5 @@ tecnologias: [{"name": "Backend: "  ,"descri": "nodeJS, express,Arquitectura ful
             ]
 conclusion: " Este sistema ofrece una solución completa y escalable para pequeños y medianos comercios que buscan digitalizar su operación sin perder simplicidad.
                                     El proyecto destaca por su diseño modular, funcionalidades integradas de análisis y control, y una experiencia de usuario moderna, ideal para uso cotidiano en entornos reales de venta."
+link: "http://minimarketninodev.s3.us-east-1.amazonaws.com/index.html"
 ---
