@@ -39,7 +39,7 @@ export default function PlantillaProyects({data,tipo="carrusel"}) {
                         {data.link&&(
                             <div className="flex justify-start mt-8">
                                 <a
-                                    href="https://appetize.io/app/b_in5xcqojt33fptm2kngxzrz5be"
+                                    href={data.link}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="px-4 py-2 bg-indigo-500 text-white rounded-xl hover:bg-indigo-600 transition"
