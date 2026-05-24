@@ -28,5 +28,5 @@ tecnologias: [{"name": "Backend: "  ,"descri": "Node js, Express JS y Sequelize 
 conclusion: "Este proyecto representa un salto técnico y creativo significativo: fue mi primera aplicación desarrollada en React Native y también mi primera experiencia integrando un backend completo con Sequelize, Node.js y AWS.
 Desarrollarlo implicó comprender a fondo el manejo de relaciones en bases de datos relacionales, la estructura cliente-servidor y los flujos de datos entre API y frontend móvil.
 El resultado es una aplicación social sólida, escalable y con un diseño atractivo, que demuestra habilidades full stack mobile, dominio en arquitectura backend, y capacidad de despliegue en entornos cloud."
-link: "https://appetize.io/app/b_in5xcqojt33fptm2kngxzrz5be"
+link: "https://appetize.io/app/b_2covr2g34wuhl6iewoh7aargc4"
 ---
