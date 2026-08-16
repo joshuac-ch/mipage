@@ -29,6 +29,7 @@ export default function Header() {
             <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/proyectos/index.html">Proyectos</a> </li>
             <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html#contactar">Contactar</a></li>
             <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/extras/index.html">Extras</a></li>
+            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html">ML</a></li>
         </ul>
     </div>
     <div className="">
@@ -51,6 +52,7 @@ export default function Header() {
             <a href="/proyectos/index.html" className="hover:text-indigo-400/80 transition-all" onClick={()=>setopen(false)}>Proyectos</a>
             <a href="/index.html#contactar" className="hover:text-indigo-400/80 transition-all" onClick={()=>setopen(false)}>Contactar</a>
             <a href="/extras/index.html" className="hover:text-indigo-400/80 transition-all" onClick={()=>setopen(false)}>Extras</a>
+            <a href="/index.html" className="hover:text-indigo-400/80 transition-all" onClick={()=>setopen(false)}>ML</a>
             </div>
         )
      }
