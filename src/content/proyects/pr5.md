@@ -1,7 +1,7 @@
 ---
 fecha: "2025-Oct-10"
 title: "Telegram Clone"
-fondo: "/proyecto2/foto1.png"
+fondo: "/proyecto3/portada1.png"
 descripcion: "Sistema de mensajería en tiempo real inspirado en Telegram, que permite
   el envío de mensajes de texto e imágenes, comunicación privada y grupal,
   y gestión de canales, utilizando WebSockets para una experiencia fluida
@@ -25,5 +25,10 @@ tecnologias: [{"name": "Backend: "  ,"descri": "NodeJS, Express, Websockets, Arq
 conclusion: "Este proyecto demuestra la implementación de sistemas en tiempo real,
   manejo de concurrencia, arquitectura cliente-servidor y despliegue en la nube,
   simulando el funcionamiento de una plataforma de mensajería moderna."
+motion: True  
 link: "no disponible"
+motions: ["/proyecto4/motion/telegram1.mp4","/proyecto4/motion/telegram2.mp4","/proyecto4/motion/telegram3.mp4","/proyecto4/motion/telegram4.mp4"]
+tag: Mensajeria & red social 
+categoria: RealTime chat 
+subcategoria: Canales y Websockets
 ---

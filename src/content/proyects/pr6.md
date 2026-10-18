@@ -1,9 +1,9 @@
 ---
 fecha: "2025-Dic-10"
 title: "Plataforma de Subida de archivos IA"
-fondo: "/proyecto2/foto1.png"
+fondo: "/proyecto5/plataforma1.png"
 descripcion: "Plataforma basada en arquitectura RAG (Retrieval-Augmented Generation) que permite a los usuarios subir archivos PDF, realizar procesamiento semántico mediante embeddings y consultar información específica a través de modelos LLM integrados con LangChain y WebLLM."
-imagenes: ["/proyecto2/foto1.png","/proyecto2/foto2.png","/proyecto2/foto3.png"]
+imagenes: ["/proyecto5/plataforma1.png"]
 caracteristicas: [
   {
     "name": "Gestión de RAG: ",
@@ -37,4 +37,8 @@ tecnologias: [{"name": "Backend: "  ,"descri": "Python, Django, Arquitectura RAG
             ]
 conclusion: "El sistema implementa una arquitectura moderna basada en RAG que permite procesar, indexar y consultar documentos de manera inteligente, escalable y segura. La solución demuestra integración completa entre backend, frontend, almacenamiento en la nube y modelos de lenguaje, aplicando buenas prácticas de arquitectura de software e IA aplicada."
 link: "no disponible"
+tag: Cloud & RAG
+categoria: Embeddings & OCR 
+subcategoria: Documentos & analisis
 ---
+

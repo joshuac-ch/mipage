@@ -45,4 +45,10 @@ conclusion: " Este proyecto demuestra mi capacidad para diseñar y desarrollar
             construir un frontend atractivo y profesional conectado a un backend
             real desplegado en la nube utilizando servicios de AWS EC2 y S3"
 link: "https://spotify-clone5.s3.us-east-1.amazonaws.com/index.html"
+motion: True
+motions: ["/proyecto3/motion/SpotyMotion.mp4","/proyecto3/motion/SpotyMotion2.mp4","/proyecto3/motion/SpotyMotion3.mp4","/proyecto3/motion/SpotyMotion4.mp4"]
+tag: Streaming
+categoria: Audio & Musica Streaming 
+subcategoria: Web Player
 ---
+PONER ETIQUQESTAS DE 2 A 3 MAXIMO COMO EN EL CORREO en poryectos realizados

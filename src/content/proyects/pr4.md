@@ -8,7 +8,7 @@ También incluye un historial de actividades, un sistema de búsqueda de publica
 
 El sistema cuenta con autenticación completa, gestión de perfiles, y un backend robusto conectado a una base de datos relacional.
 Todas las imágenes y archivos se almacenan en la nube utilizando AWS S3, garantizando rendimiento y escalabilidad."
-imagenes: ["/proyecto4/fondo1.png","/proyecto1/foto2.png","/proyecto1/foto3.png"]
+imagenes: ["/proyecto4/fondo1.png"]
 caracteristicas: [
                   {"name": "Autenticación y gestión de usuarios ", "descri": ""},
                   {"name": "Publicaciones con imágenes, likes, comentarios y guardados.", "descri" : ""},
@@ -29,4 +29,7 @@ conclusion: "Este proyecto representa un salto técnico y creativo significativo
 Desarrollarlo implicó comprender a fondo el manejo de relaciones en bases de datos relacionales, la estructura cliente-servidor y los flujos de datos entre API y frontend móvil.
 El resultado es una aplicación social sólida, escalable y con un diseño atractivo, que demuestra habilidades full stack mobile, dominio en arquitectura backend, y capacidad de despliegue en entornos cloud."
 link: "https://appetize.io/app/b_2covr2g34wuhl6iewoh7aargc4"
+tag: Mobile App
+categoria: Social & Habitos 
+subcategoria: Social Media
 ---
