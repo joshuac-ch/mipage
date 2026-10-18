@@ -15,9 +15,12 @@ import Header from "@/components/Header/Header";
 import IconLogo from "../../assets/nino.jpg";
 import Foot from "@/components/Footer/Foot.astro";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
+Coffee,
   Contact,
   FileStack,
+  GitCommit,
   IceCreamConeIcon,
   Info,
   InspectionPanelIcon,
@@ -32,6 +35,7 @@ import { getCollection } from "astro:content";
 import pr1 from "../../../public/proyecto2/foto1.png";
 import pr2 from "../../../public/proyecto3/foto2.png";
 import { toast, Toaster } from "sonner";
+import { useState } from "react";
 const data = await getCollection("stacks");
 
 ---
@@ -44,6 +48,7 @@ const data = await getCollection("stacks");
 >
   <source src="/fondo3.mp4" type="video/mp4" />
 </video>
+
 <div class="sticky top-0 z-50 backdrop-blur-xl border-1 border-white/5 bg-white/5">
   <Header client:load />
 </div>
@@ -54,7 +59,7 @@ const data = await getCollection("stacks");
       <div
         class="grid md:pl-18 grid-cols-1 items-start gap-5 md:grid-cols-2">
         <div class="flex flex-col justify-center">
-          <h1 class="font-black md:text-4xl text-2xl">Hola soy Nino dev</h1>
+          <h1 class="font-black md:text-4xl text-2xl">Hola soy Ninodev</h1>
           <h2 class="md:text-2xl text-2xl font-black mt-2">
             Ingeniero de software con I.A.
           </h2>
@@ -162,7 +167,7 @@ const data = await getCollection("stacks");
               id="experiencia-2"
               class="prose prose-sm transition-all duration-500 ease-in-out text-[15px] max-h-20 overflow-hidden text-gray-300 leading-relaxed"
             >
-              Fui desarrolador por 6 meses en PC-PLANET una empresa tecnologica
+              Fui desarrolador por 1 año en PC-PLANET una empresa tecnologica
               donde me encargaban proyecto de desarrollo fronted por el momento
               luego al finalizar decidi crear un proyecto que pueda agalizar las
               tareas ya que no tenian un sistema de ventas asi que lo termine
@@ -210,7 +215,7 @@ const data = await getCollection("stacks");
                 >
                 <Button
                   className="bg-white/10 text-sm px-8 py-2 hover:bg-indigo-300/10"
-                  >Ver</Button
+                  ><a href="http://minimarketninodev.s3.us-east-1.amazonaws.com/index.html" target="_blank">Ver</a></Button
                 >
               </div>
             </div>
@@ -234,7 +239,7 @@ const data = await getCollection("stacks");
                 >
                 <Button
                   className="bg-white/10 text-sm px-8 py-2 hover:bg-indigo-300/10"
-                  >Ver</Button
+                  ><a href="https://spotify-clone5.s3.us-east-1.amazonaws.com/index.html" target="_blank">Ver</a></Button
                 >
               </div>
             </div>
@@ -269,11 +274,20 @@ const data = await getCollection("stacks");
               <p>Estudio en SENATI</p>
             </div>
           </div>
+          <div class="flex m-4 flex-row items-center">
+            <div class="m-2 border-2 p-4 border-white/10 rounded-full">
+              <GitCommit></GitCommit>                        
+            </div>
+            <div class="">
+              <p>Commits</p>
+              <p>+1300 commits en el último año</p>
+            </div>
+          </div>
         </div>
 
         <div class="flex-1 flex-col ">
-          <div class="border h-45 p-0 border-white/10 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(79,70,229,0.15)] 
-          hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+          <div class="border  p-0 border-white/10 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(79,70,229,0.15)] 
+          hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] group transition">
             <div
               class="flex flex-row p-2 w-30 border-white/20 rounded-4xl border-1 m-4"
             >
@@ -282,17 +296,23 @@ const data = await getCollection("stacks");
             </div>
             <div class="m-4">
               <p class="w-80">Hablemos sobre tu proximo proyecto.</p>
-              <Button className="mt-4 bg-white/10 hover:bg-indigo-300/10 "
-                >Enviar un Mensaje</Button
-              >
+               <form id="contact-form">         
+                <Input type="email" name="email" placeholder="Tu email" className="w-full mt-2 border-white/10" required></Input>
+                <Input placeholder="Mensaje..." name="mensaje" required className="w-full mt-2 border-white/10"></Input> 
+                <div class="flex flex-row justify-between items-end">
+                  <Button type="submit" className="mt-4 cursor-pointer bg-white/10 hover:bg-indigo-300/10 "
+                >Enviar un Mensaje</Button>
+                <div class="flex flex-row  gap-2 group-hover:bg-white/30 rounded-full transition-all duration-300 group-hover:px-2 py-1">
+                  <img src={awsLogo.src} class="w-5 h-5  " alt="">
+                  <span class="text-zinc-500 group-hover:text-white transition-all duration-300 text-xs">Microservicio SES</span>
+                </div>
+                </div>
+              </form>             
             </div>
           </div>
-          <div
-            class="flex mt-6 border h-26 p-0 border-white/10 overflow-hidden rounded-2xl shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition"
-          >
-            <div
-              class="flex flex-row justify-between items-center p-2 w-full m-4"
-            >
+          <div class="flex mt-6 border h-20 p-0 border-white/10 overflow-hidden rounded-2xl 
+          shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+            <div class="flex flex-row justify-between items-center p-2 w-full m-4">
               <div class="flex flex-row ml-2 justify-between items-center">
                 <img
                   src={IconLogo.src}
@@ -322,17 +342,19 @@ const data = await getCollection("stacks");
             <p class="pl-2">Stack</p>
           </div>
           <div class="flex flex-row gap-1 m-1 justify-center">
-            <div class="flex flex-row flex-wrap w-76">
+            <div class="flex flex-row justify-center flex-wrap w-76">
               {
                 data.map((s) => {
                   const { logo, nombre } = s.data;
                   return (
-                    <div class="border-2 hover:bg-indigo-500/10 overflow-hidden border-white/10 m-1 rounded-2xl p-2 shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
-                      <img
+                    <div class="border-2  hover:bg-indigo-500/10 overflow-hidden border-white/10 m-1 rounded-2xl p-2 shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)] transition">
+                      <a title={nombre}>
+                        <img
                         src={logo}
                         alt={nombre}
-                        class="hover:scale-105 transition-all duration-100 w-12 h-12"
+                        class="hover:scale-105 transition-all duration-100 w-12 h-12 md:w-10 md:h-10"
                       />
+                      </a>
                     </div>
                   );
                 })
@@ -361,10 +383,39 @@ const data = await getCollection("stacks");
 </div>
 
 <script is:inline>
+  const form=document.getElementById("contact-form")
+  form.addEventListener('submit',async(e)=>{
+    e.preventDefault()
+    const data=Object.fromEntries(new FormData(form));
+    
+    await fetch("https://dxlje87k6d.execute-api.us-east-1.amazonaws.com/default/envioDecorreos",{
+      method:"POST",
+      headers:{'Content-Type':"application/json"},
+      body:JSON.stringify(data)
+    })
+    
+    window.dispatchEvent(
+      new CustomEvent("show-email",{
+        detail:{
+          message:"Se envio el correo",
+          type:"success"
+        }
+      })
+    )
+    form.reset()
+  })
   document.getElementById("copyBtn").addEventListener("click", async () => {
     try {
       await navigator.clipboard.writeText("condorenajoshua98@gmail.com");
-      alert("Se agrego al portapapeles")
+       // Enviar evento a React Sonner
+      window.dispatchEvent(
+        new CustomEvent("show-toast", {
+          detail: {
+            message: "Se agregó al portapapeles",
+            type: "success"
+          }
+        })
+      );
     } catch (e) {
       console.error(" Hubo un error", e);
     }

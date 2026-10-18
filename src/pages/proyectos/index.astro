@@ -8,6 +8,15 @@ import pr2 from "../../../public/proyecto3/foto2.png";
 import { getCollection } from "astro:content";
 import Header from "@/components/Header/Header";
 const data=await getCollection("proyects")
+const paleta=["indigo","red","blue","green","cyan","orange"]
+const colores={
+  indigo: "border-indigo-400 text-indigo-400",
+  red: "border-red-400 text-red-400",
+  blue: "border-blue-400 text-blue-400",
+  green: "border-green-400 text-green-400",
+  cyan: "border-cyan-400 text-cyan-400",
+  orange: "border-orange-400 text-orange-400",
+}
 ---
 <meta charset='utf-8'>
 <video
@@ -23,48 +32,57 @@ const data=await getCollection("proyects")
 >
   <Header client:load></Header>
 </div>
-<div class="relative backdrop-blur-xl bg-white/5">
+<div class="relative backdrop-blur-xl bg-white/5 p-4">
   <div class="flex flex-col items-center justify-center w-full pt-20 pb-20">
     <section>
-      <h1 class="text-2xl">Proyectos que he realizado</h1>
+      <h1 class="text-2xl font-semibold">Proyectos que he realizado</h1>
     </section>
     
      <section class="mt-8">
-      <div class="grid gap-3 grid-cols-1  md:grid-cols-3">
-        {data.map((d)=>{
+      <div class="grid gap-3 grid-cols-1 md:grid-cols-3">
+        {data.map((d,i)=>{
             const {slug}=d
-            const {fondo,title}=d.data
+            const {fondo,title,link,tag,categoria,subcategoria}=d.data
+            console.log("i",colores[paleta[i]])
             return(
              <> 
             <div
-          class="bg-white/20 rounded-2xl hover:scale-103 overflow-hidden 
-          transition-all shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)]">
-          <img
-            src={fondo}
-            class="max-h-60 w-110 h-75 rounded-t-2xl rounded-b-none"
-            alt=""
-          />
-          <div class="pt-2 pl-4 pb-4 pr-4">
-            <p class="w-100 text-2xl">{title}</p>
+            class="relative h-110 bg-white/20 rounded-2xl hover:scale-103 overflow-hidden- 
+            transition-all shadow-[0_0_25px_rgba(79,70,229,0.15)] hover:shadow-[0_0_40px_rgba(129,140,248,0.3)]">
+              <div class={`absolute right-2 top-2 text-[12px] border-2 py-2 px-4 font-semibold bg-zinc-900 ${colores[paleta[i]]} rounded-full`}>
+                <span>{tag}</span>
+              </div>
+              <img
+                src={fondo}
+                class="max-h-60 w-110 h-75 rounded-t-2xl rounded-b-none"
+                alt=""
+              />
+              <div class="pt-2 pl-4 pb-4 pr-4 flex flex-col justify-start md:h-35">
+                <div class="font-semibold mb-1 w-100">
+                  <span class="text-indigo-300">{categoria}</span> • <span class="text-zinc-300">{subcategoria}</span>
+                </div>
+                <div class="">
+                  <p class="md:w-100 text-2xl">{title}</p>
+                </div>
 
-            <div class="flex flex-row gap-4 mt-4">
-              <div>
-                <div>
-                <Button
-                  className="w-40 cursor-pointer bg-white/10 hover:bg-indigo-300/10"
-                  ><a href={`/proyectos/${slug}`} transition:name={`img-${slug}`}>Caso de studio </a></Button>
-              </div>
-              </div>
-              <div>
-                <Button
-                  className="w-40 cursor-pointer bg-white/10 hover:bg-indigo-300/10"
-                  >Visitar Web</Button>
+                <div class="flex flex-row gap-4 mt-4">
+                  <div>
+                    <div>
+                    <Button
+                      className="md:w-40 cursor-pointer bg-white/10 hover:bg-indigo-300/10"
+                      ><a href={`/proyectos/${slug}/index.html`} transition:name={`img-${slug}`}>Caso de studio </a></Button>
+                  </div>
+                  </div>
+                  <div>
+                    <Button
+                      className="md:w-40 cursor-pointer bg-white/10 hover:bg-indigo-300/10"
+                      ><a href={link} target="_blank">Visitar Web</a></Button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
         
-            </>
+          </>
         )
         })}
       </div>
