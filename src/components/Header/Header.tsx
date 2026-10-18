@@ -24,12 +24,12 @@ export default function Header() {
 
     <div>
         <ul className="hidden md:flex text-md flex-row gap-10">
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html">Sobre mi</a></li>
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html#experiencia">Experiencia</a></li>
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/proyectos/index.html">Proyectos</a> </li>
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html#contactar">Contactar</a></li>
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/extras/index.html">Extras</a></li>
-            <li className="transition-all duration-300 cursor-pointer hover:text-indigo-400/80"><a href="/index.html">ML</a></li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/index.html">Sobre mi</a></li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/index.html#experiencia">Experiencia</a></li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/proyectos/index.html">Proyectos</a> </li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/index.html#contactar">Contactar</a></li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/extras/index.html">Extras</a></li>
+            <li className="cursor-pointer hover:text-indigo-400/80"><a href="/index.html">ML</a></li>
         </ul>
     </div>
     <div className="">

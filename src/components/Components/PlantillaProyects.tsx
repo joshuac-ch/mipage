@@ -6,6 +6,7 @@ import img1 from "./../../../public/proyecto2/foto1.png"
 import img2 from "./../../../public/proyecto2/foto2.png"
 import img3 from "./../../../public/proyecto2/foto3.png"
 import "../../styles/global.css"
+import MotionCarousel from './MotionCarrusel'
 export default function PlantillaProyects({data,tipo="carrusel"}) {
   
    return (
@@ -16,7 +17,7 @@ export default function PlantillaProyects({data,tipo="carrusel"}) {
         <div className="sticky top-0 z-50 text-white backdrop-blur-xl border-1 border-white/5 bg-white/5 ">
             <Header ></Header>
         </div>
-        <div className="relative backdrop-blur-xl bg-white/5">
+        <div className="relative backdrop-blur-xl  bg-white/5">
                 <div className="flex text-white justify-center pt-10 pb-10 ">
                     <div className="">
                         <LeftButton ruta={"/proyectos/index.html"}></LeftButton>
@@ -29,12 +30,20 @@ export default function PlantillaProyects({data,tipo="carrusel"}) {
                             <p className="text-4xl">{data.title}</p>
                         </div>
                         {
-                            tipo=="carrusel"&&
+                            tipo=="carrusel"&& !data.motions &&
                             (
                                 <div className="mt-8">
                                     <Carrosel img1={data.imagenes[0]} img2={data.imagenes[1]} img3={data.imagenes[2]}></Carrosel>
                                 </div>
                             )
+                        }
+                        {
+                          data.motions&&(
+                            <div className="">
+                                <MotionCarousel motions={data.motions}></MotionCarousel>
+                            </div>
+                          ) 
+                          
                         }
                         {data.link&&(
                             <div className="flex justify-start mt-8">
@@ -52,7 +61,7 @@ export default function PlantillaProyects({data,tipo="carrusel"}) {
                             <div className="mt-4">
                                 <p className="text-xl">{data.title}</p>
                             </div>
-                            <div className="prose-sm md:prose-lg md:w-150 mr-6">
+                            <div className="prose-sm md:prose-lg w-150 md:w-250 mr-6">
                                 <div className="text-white/40">
                                     <p className="font-bold text-white">Descripcion del Proyecto</p>
                                     <p>{data.descripcion}</p>
