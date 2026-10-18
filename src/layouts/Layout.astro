@@ -1,5 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import ToasterPlantila from "@/components/Components/ToasterPlantila";
+import ToasterCorreo from "@/components/Components/ToasterCorreo"
 ---
 
 <!doctype html>
@@ -7,14 +9,17 @@ import { ClientRouter } from "astro:transitions";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/ninohub.jpg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>NinoDev</title>
 		<link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
-		<ClientRouter/>
+		
 	</head>
 	<body>
+		<ClientRouter/>
 		<slot />
+		<ToasterPlantila client:load></ToasterPlantila>
+		<ToasterCorreo client:load></ToasterCorreo>
 	</body>
 </html>
 
