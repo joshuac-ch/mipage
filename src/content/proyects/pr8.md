@@ -1,9 +1,9 @@
 ---
 fecha: "2026-Oct-17"
 title: "Vault — Motor de Descubrimiento Multimodal"
-fondo: "/proyecto7/vaultportada.png"
+fondo: "/proyecto7/vaultportada2.png"
 descripcion: "Plataforma de almacenamiento y recuperación inteligente de contenido multimedia que integra inteligencia artificial, embeddings textuales y visuales, búsqueda semántica y recuperación por similitud de imágenes. Permite subir y organizar imágenes, videos y otros archivos multimedia en colecciones públicas y privadas protegidas mediante PIN. Implementa un pipeline de análisis automatizado que transforma el contenido multimedia en representaciones vectoriales y metadatos útiles para facilitar su clasificación, indexación y recuperación. El sistema combina una interfaz interactiva desarrollada con React y TypeScript, un backend en Python basado en FastAPI y arquitectura hexagonal, y PostgreSQL con pgvector para la persistencia y búsqueda vectorial. El proyecto integra modelos open source de procesamiento de lenguaje y representación visual, junto con servicios de AWS para el almacenamiento y despliegue de la aplicación."
-imagenes: ["/proyecto7/vaultportada.png"]
+imagenes: ["/proyecto7/vaultportada2.png"]
 
 caracteristicas:
   - name: "Gestión de almacenamiento multimedia"
