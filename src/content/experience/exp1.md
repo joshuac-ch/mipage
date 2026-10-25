@@ -1,8 +1,10 @@
 ---
 id: 1 
-fecha: "Marzo 7, 2023 - Junio 10, 2023"
+fecha: "March 7, 2023 - Juny 10, 2023"
 empresa: "SediLimp"
 titulo: "Desarrollo de web (WordPress)"
-descri: "Desarrolo de una pagina de para usuarios ofreciendo los servicios de la empresa, somo nosotros, formularios."
+descri: 'Desarrollo de una página web corporativa para una empresa de limpieza de muebles y servicios de limpieza. La plataforma permite a los usuarios conocer los servicios ofrecidos, obtener información sobre la empresa y contactar mediante formularios.'
+icon_company: "<Computer />"
+sector: "Limpieza e Higiene"
 ---
 
